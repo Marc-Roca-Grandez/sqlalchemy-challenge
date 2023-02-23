@@ -60,7 +60,7 @@ def stations():
     results = session.query(station.station, station.name, station.longitude, station.id, station.latitude, station.elevation).all()
     session.close()
     all_stations = []
-    for station, name, longitude,id,latitude,elevation  in results:
+    for station,name,longitude,id,latitude,elevation in results:
         station_dict = {}
         station_dict["station"] = station
         station_dict["name"] = name
